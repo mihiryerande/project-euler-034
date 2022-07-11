@@ -15,7 +15,7 @@ DIGIT_FACTS = [factorial(i) for i in range(10)]
 CURIOUS_LIMIT = 7 * factorial(9)
 
 
-def digit_factorial_sum(n):
+def digit_factorial_sum(n: int) -> int:
     """
     Returns the 'digit factorial sum' of `n`,
       meaning the sum of the factorials of the digits of `n`.
@@ -24,20 +24,20 @@ def digit_factorial_sum(n):
         n (int): Natural number
 
     Returns:
-        Digit factorial sum of `n`
+        (int): Digit factorial sum of `n`
     """
     global DIGIT_FACTS
     # Just use the str of the number
     return sum(map(lambda d: DIGIT_FACTS[int(d)], list(str(n))))
 
 
-def main():
+def main() -> int:
     """
     Returns the sum of all 'curious' numbers, meaning
       numbers which are equal to the sum of the factorials of their digits.
 
     Returns:
-        Sum of all curious numbers
+        (int): Sum of all curious numbers
     """
     # Idea 0:
     #     No single-digit numbers qualify, according to instructions.
